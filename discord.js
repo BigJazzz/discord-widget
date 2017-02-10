@@ -51,7 +51,7 @@ var discordWidget = discordWidget || (function(){
           default:
           themeFile = 'light.min.css';
         }
-        $('head').append('<link rel="stylesheet" href="http://discord.deliriousdrunkards.com/' + themeFile + '" type="text/css" />');
+        //$('head').append('<link rel="stylesheet" href="http://discord.deliriousdrunkards.com/' + themeFile + '" type="text/css" />');
 
         var url = 'https://discordapp.com/api/servers/' + _params.serverId + '/embed.json';
 
@@ -130,7 +130,7 @@ var discordWidget = discordWidget || (function(){
           var channels, users, hideChannel, hiddenChannels;
 
           if (p.title !== false) {
-            widgetElement.innerHTML = '<div class="discord-title"><h3>' + p.title + '</h3></div>' + defaultInnerHtml;
+            widgetElement.innerHTML = '<div class="discord-title">' + p.title + '</div>' + defaultInnerHtml;
             treeElement = $('.discord-tree')[0];
           } else {
             widgetElement.innerHTML = defaultInnerHtml;
